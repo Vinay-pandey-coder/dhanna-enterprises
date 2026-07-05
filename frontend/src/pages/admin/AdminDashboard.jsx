@@ -11,7 +11,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_API}/admin/users`, {
+        const res = await axios.get(`${import.meta.env.VITE_API}admin/users`, {
           headers: { Authorization: `Bearer ${adminToken}` }
         })
         setUsers(res.data)
@@ -25,7 +25,7 @@ export default function AdminDashboard() {
 
   const handleDelete = async (id) => {
     if (!window.confirm('Delete this user?')) return
-    await axios.delete(`${import.meta.env.VITE_API}/admin/users/${id}`, {
+    await axios.delete(`${import.meta.env.VITE_API}admin/users/${id}`, {
       headers: { Authorization: `Bearer ${adminToken}` }
     })
     setUsers(users.filter(u => u._id !== id))

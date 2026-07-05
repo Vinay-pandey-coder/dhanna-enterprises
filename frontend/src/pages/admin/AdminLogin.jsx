@@ -14,7 +14,7 @@ export default function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.post(`${import.meta.env.VITE_API}/auth/admin/login`, form)
+      const res = await axios.post(`${import.meta.env.VITE_API}auth/admin/login`, form)
       adminLogin(res.data.token)
       navigate('/admin/dashboard')
     } catch (err) {
