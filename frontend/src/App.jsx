@@ -18,38 +18,40 @@ import Login from './pages/Login'
 import AdminLogin from './pages/admin/AdminLogin'
 import AdminDashboard from './pages/admin/AdminDashboard'
 
+function Layout({ children }) {
+  return (
+    <>
+      <TopBar />
+      <Navbar />
+      {children}
+      <Footer />
+    </>
+  )
+}
+
 export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          {/* Admin routes — no navbar/footer */}
+          {/* Admin — no layout */}
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={
             <ProtectedRoute><AdminDashboard /></ProtectedRoute>
           } />
 
-          {/* Public routes — with navbar/footer */}
-          <Route path="/*" element={
-            <>
-              <TopBar />
-              <Navbar />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/payment" element={<Payment />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/google-form" element={<GoogleForm />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/terms" element={<Terms />} />
-                <Route path="/refund-policy" element={<Refund />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/login" element={<Login />} />
-              </Routes>
-              <Footer />
-            </>
-          } />
+          {/* Public — with layout */}
+          <Route path="/" element={<Layout><Home /></Layout>} />
+          <Route path="/about" element={<Layout><About /></Layout>} />
+          <Route path="/services" element={<Layout><Services /></Layout>} />
+          <Route path="/payment" element={<Layout><Payment /></Layout>} />
+          <Route path="/contact" element={<Layout><Contact /></Layout>} />
+          <Route path="/google-form" element={<Layout><GoogleForm /></Layout>} />
+          <Route path="/privacy" element={<Layout><Privacy /></Layout>} />
+          <Route path="/terms" element={<Layout><Terms /></Layout>} />
+          <Route path="/refund-policy" element={<Layout><Refund /></Layout>} />
+          <Route path="/register" element={<Layout><Register /></Layout>} />
+          <Route path="/login" element={<Layout><Login /></Layout>} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
