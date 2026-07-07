@@ -3,7 +3,9 @@ import { createContext, useState, useContext } from 'react'
 const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
-  const [adminToken, setAdminToken] = useState(localStorage.getItem('adminToken'))
+  const [adminToken, setAdminToken] = useState(
+    () => localStorage.getItem('adminToken') // lazy init
+  )
 
   const adminLogin = (token) => {
     localStorage.setItem('adminToken', token)

@@ -3,7 +3,11 @@ import { useAuth } from '../context/AuthContext'
 
 const ProtectedRoute = ({ children }) => {
   const { adminToken } = useAuth()
-  if (!adminToken) return <Navigate to="/admin/login" />
+  
+  if (!adminToken) {
+    return <Navigate to="/admin/login" replace />
+  }
+  
   return children
 }
 
