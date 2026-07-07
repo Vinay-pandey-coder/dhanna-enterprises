@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
@@ -10,11 +10,11 @@ export default function AdminLogin() {
   const { adminLogin, adminToken } = useAuth()
   const navigate = useNavigate()
 
-  // Already logged in — redirect
-  if (adminToken) {
-    navigate('/admin/dashboard')
-    return null
-  }
+  useEffect(() => {
+    if (adminToken) {
+      navigate('/admin/dashboard')
+    }
+  }, [adminToken])
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
