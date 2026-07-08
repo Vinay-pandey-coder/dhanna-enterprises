@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import UserProtectedRoute from './components/UserProtectedRoute'
@@ -33,7 +33,6 @@ function Layout({ children }) {
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
         <Routes>
           {/* Admin — no layout */}
           <Route path="/admin/login" element={<AdminLogin />} />
@@ -64,7 +63,6 @@ export default function App() {
             </UserProtectedRoute>
           } />
         </Routes>
-      </BrowserRouter>
     </AuthProvider>
   )
 }
