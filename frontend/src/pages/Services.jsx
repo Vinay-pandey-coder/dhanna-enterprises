@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Icon({ path, size = 22 }) {
   return (
@@ -92,7 +93,7 @@ const moreCategories = [
   },
 ]
 
-function ServiceCard({ service }) {
+function ServiceCard({ service, onGetStarted }) {
   const [expanded, setExpanded] = useState(false)
   const visibleItems = expanded ? service.items : service.items.slice(0, 4)
 
@@ -126,22 +127,33 @@ function ServiceCard({ service }) {
 
       {service.items.length > 4 && (
         <button onClick={() => setExpanded(!expanded)}
-          className="text-xs font-semibold mb-4 block transition-colors"
-          style={{color: '#d4a017'}}>
+          className="text-xs font-semibold mb-4 block"
+          style={{color: '#d4a017', background: 'none', border: 'none', padding: 0, cursor: 'pointer'}}>
           {expanded ? '− Show less' : `+${service.items.length - 4} more services`}
         </button>
       )}
 
-      <a href="https://wa.me/918287746345" target="_blank" rel="noreferrer"
-        className="inline-flex items-center gap-1 text-xs font-semibold" style={{color: '#0f2044'}}>
+      <button onClick={onGetStarted}
+        className="inline-flex items-center gap-1 text-xs font-semibold"
+        style={{color: '#0f2044', background: 'none', border: 'none', padding: 0, cursor: 'pointer'}}>
         Get Started <Icon path={icons.arrow} size={13}/>
-      </a>
+      </button>
     </div>
   )
 }
 
 export default function Services() {
   const [openIndex, setOpenIndex] = useState(-1)
+  const navigate = useNavigate()
+
+  const handleGetStarted = () => {
+    const token = localStorage.getItem('userToken')
+    if (token) {
+      window.open('https://wa.me/918287746345', '_blank')
+    } else {
+      navigate('/login')
+    }
+  }
 
   return (
     <div style={{background: '#f8f7f4'}} className="py-20 px-6 min-h-screen">
@@ -153,14 +165,14 @@ export default function Services() {
           <p className="text-gray-500 max-w-xl mx-auto">Comprehensive tax and financial solutions tailored for every need</p>
         </div>
 
-        {/* ===== MAIN SERVICES ===== */}
+        {/* MAIN SERVICES */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {serviceCategories.map(service => (
-            <ServiceCard key={service.title} service={service} />
+            <ServiceCard key={service.title} service={service} onGetStarted={handleGetStarted} />
           ))}
         </div>
 
-        {/* ===== COMPLETE DIRECTORY — accordion ===== */}
+        {/* COMPLETE DIRECTORY */}
         <div className="mb-10">
           <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#d4a017'}}>More Services</p>
           <h3 className="text-3xl font-bold" style={{color: '#0f2044'}}>Complete Service Directory</h3>
@@ -200,11 +212,11 @@ export default function Services() {
                         </div>
                       ))}
                     </div>
-                    <a href="https://wa.me/918287746345" target="_blank" rel="noreferrer"
+                    <button onClick={handleGetStarted}
                       className="inline-flex items-center gap-2 mt-4 text-sm font-semibold"
-                      style={{color: '#d4a017'}}>
+                      style={{color: '#d4a017', background: 'none', border: 'none', padding: 0, cursor: 'pointer'}}>
                       Get Started with {cat.title} <Icon path={icons.arrow} size={14}/>
-                    </a>
+                    </button>
                   </div>
                 )}
               </div>
@@ -217,11 +229,11 @@ export default function Services() {
           style={{background: 'linear-gradient(135deg, #0f2044, #163060)', border: '1px solid rgba(212,160,23,0.2)'}}>
           <h3 className="text-3xl font-bold text-white mb-3">Not sure which service you need?</h3>
           <p className="text-gray-400 mb-6">Talk to our experts for free — we'll guide you to the right solution.</p>
-          <a href="https://wa.me/918287746345" target="_blank" rel="noreferrer"
+          <button onClick={handleGetStarted}
             className="inline-block px-8 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105"
-            style={{background: '#d4a017', color: '#050d1a'}}>
+            style={{background: '#d4a017', color: '#050d1a', border: 'none', cursor: 'pointer'}}>
             Free WhatsApp Consultation
-          </a>
+          </button>
         </div>
       </div>
     </div>

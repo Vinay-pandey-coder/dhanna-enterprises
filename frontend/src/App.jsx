@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import ProtectedRoute from './components/ProtectedRoute'
+import UserProtectedRoute from './components/UserProtectedRoute'
 import TopBar from './components/layout/TopBar'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
@@ -40,18 +41,28 @@ export default function App() {
             <ProtectedRoute><AdminDashboard /></ProtectedRoute>
           } />
 
-          {/* Public — with layout */}
+          {/* Public routes */}
           <Route path="/" element={<Layout><Home /></Layout>} />
           <Route path="/about" element={<Layout><About /></Layout>} />
-          <Route path="/services" element={<Layout><Services /></Layout>} />
-          <Route path="/payment" element={<Layout><Payment /></Layout>} />
           <Route path="/contact" element={<Layout><Contact /></Layout>} />
-          <Route path="/google-form" element={<Layout><GoogleForm /></Layout>} />
           <Route path="/privacy" element={<Layout><Privacy /></Layout>} />
           <Route path="/terms" element={<Layout><Terms /></Layout>} />
           <Route path="/refund-policy" element={<Layout><Refund /></Layout>} />
           <Route path="/register" element={<Layout><Register /></Layout>} />
           <Route path="/login" element={<Layout><Login /></Layout>} />
+          <Route path="/services" element={<Layout><Services /></Layout>} />
+
+          {/* Login ke baad dikhne wale pages */}
+          <Route path="/payment" element={
+            <UserProtectedRoute>
+              <Layout><Payment /></Layout>
+            </UserProtectedRoute>
+          } />
+          <Route path="/google-form" element={
+            <UserProtectedRoute>
+              <Layout><GoogleForm /></Layout>
+            </UserProtectedRoute>
+          } />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
