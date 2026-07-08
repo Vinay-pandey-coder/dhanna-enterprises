@@ -1,5 +1,14 @@
+import SEO from '../components/SEO'
+
+
 export default function Refund() {
   return (
+    <>
+    <SEO
+  title="Refund Policy"
+  description="Refund and Cancellation Policy of Dhanna Enterprises for tax and compliance services."
+  keywords="refund policy Dhanna Enterprises"
+/>
     <div style={{background: '#f8f7f4'}} className="py-20 px-6 min-h-screen">
       <div className="max-w-3xl mx-auto">
 
@@ -51,5 +60,6 @@ export default function Refund() {
         </div>
       </div>
     </div>
+    </>
   )
 }

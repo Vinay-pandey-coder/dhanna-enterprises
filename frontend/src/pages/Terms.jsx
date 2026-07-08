@@ -1,5 +1,14 @@
+import SEO from '../components/SEO'
+
+
 export default function Terms() {
   return (
+    <>
+    <SEO
+  title="Terms & Conditions"
+  description="Terms and Conditions of Dhanna Enterprises for our tax and financial services."
+  keywords="terms conditions Dhanna Enterprises"
+/>
     <div style={{background: '#f8f7f4'}} className="py-20 px-6 min-h-screen">
       <div className="max-w-3xl mx-auto">
 
@@ -71,5 +80,6 @@ export default function Terms() {
         </div>
       </div>
     </div>
+    </>
   )
 }

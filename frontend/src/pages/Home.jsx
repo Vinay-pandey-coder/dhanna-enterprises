@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../components/SEO'
 
 function Icon({ path, size = 22 }) {
   return (
@@ -28,6 +29,11 @@ const icons = {
 const Home = () => {
   return (
     <>
+          <SEO
+        title="Home"
+        description="Dhanna Enterprises provides trusted GST Registration, ITR Filing, Accounting, MSME Registration and business compliance services for individuals and businesses across India."
+        keywords="GST registration, ITR filing, tax consultant India, accounting services, MSME registration, free ITR filing"
+      />
       {/* ===== HERO ===== */}
       <div className="relative overflow-hidden" style={{
         background: 'linear-gradient(135deg, #050d1a 0%, #0f2044 50%, #163060 100%)',

@@ -1,5 +1,13 @@
+import SEO from '../components/SEO'
+
 export default function Privacy() {
   return (
+    <>
+    <SEO
+  title="Privacy Policy"
+  description="Privacy Policy of Dhanna Enterprises — how we collect, use and protect your personal information."
+  keywords="privacy policy Dhanna Enterprises"
+/>
     <div style={{background: '#f8f7f4'}} className="py-20 px-6 min-h-screen">
       <div className="max-w-3xl mx-auto">
 
@@ -51,5 +59,6 @@ export default function Privacy() {
         </div>
       </div>
     </div>
+    </>
   )
 }

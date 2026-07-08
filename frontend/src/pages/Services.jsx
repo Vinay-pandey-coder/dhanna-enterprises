@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 function Icon({ path, size = 22 }) {
   return (
@@ -156,6 +157,12 @@ export default function Services() {
   }
 
   return (
+    <> 
+    <SEO
+  title="Our Services"
+  description="Dhanna Enterprises offers GST Registration, ITR Filing, Accounting, Audit, MSME Registration, FSSAI License, Trademark Registration and more."
+  keywords="GST services, ITR filing, accounting bookkeeping, MSME registration, FSSAI license, trademark registration, DSC services"
+/>
     <div style={{background: '#f8f7f4'}} className="py-20 px-6 min-h-screen">
       <div className="max-w-6xl mx-auto">
 
@@ -237,5 +244,6 @@ export default function Services() {
         </div>
       </div>
     </div>
+</>
   )
 }

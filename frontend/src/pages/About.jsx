@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../components/SEO'
 
 function Icon({ path, size = 20 }) {
   return (
@@ -24,6 +25,12 @@ const icons = {
 
 const About = () => {
   return (
+    <>
+    <SEO
+  title="About Us"
+  description="Learn about Dhanna Enterprises — a trusted financial and business consultancy providing GST, ITR, accounting and compliance services across India."
+  keywords="about Dhanna Enterprises, tax consultancy, financial services India"
+/>
     <div style={{background: '#f8f7f4'}} className="min-h-screen">
 
       {/* Header band */}
@@ -127,7 +134,7 @@ const About = () => {
             {[
               { icon: 'phone', label: 'Phone / WhatsApp', value: '8287746345', href: 'tel:8287746345' },
               { icon: 'mail', label: 'Email', value: 'support.dhanna@gmail.com', href: 'mailto:support.dhanna@gmail.com' },
-              { icon: 'globe', label: 'Website', value: 'dhannaenterprises.in', href: 'https://www.dhannaenterprises.in' },
+              { icon: 'globe', label: 'Website', value: 'dhannaenterprises.in', href: 'https://dhanna-enterprises.vercel.app/' },
               { icon: 'clock', label: 'Hours', value: 'Mon–Sat | 9–7', href: null },
             ].map(item => (
               <div key={item.label}>
@@ -153,6 +160,7 @@ const About = () => {
 
       </div>
     </div>
+    </>
   )
 }
 

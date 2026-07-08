@@ -1,5 +1,14 @@
+import SEO from '../components/SEO'
+
+
 export default function Contact() {
   return (
+    <>
+    <SEO
+  title="Contact Us"
+  description="Contact Dhanna Enterprises for GST, ITR, accounting and business compliance services. Call or WhatsApp us at 8287746345."
+  keywords="contact Dhanna Enterprises, tax consultant contact, GST help"
+/>
     <div style={{background: '#f8f7f4'}} className="py-20 px-6 min-h-screen">
       <div className="max-w-5xl mx-auto">
 
@@ -40,5 +49,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
+</>
   )
 }
