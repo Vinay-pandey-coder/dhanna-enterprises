@@ -1,17 +1,23 @@
-import { Helmet } from 'react-helmet-async'
+import { useEffect } from 'react'
 
 export default function SEO({ title, description, keywords }) {
-  return (
-    <Helmet>
-      <title>{title} | Dhanna Enterprises</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Dhanna Enterprises" />
-      <meta property="og:title" content={`${title} | Dhanna Enterprises`} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://dhanna-enterprises.vercel.app/" />
-      <link rel="canonical" href="https://dhanna-enterprises.vercel.app/" />
-    </Helmet>
-  )
+  useEffect(() => {
+    document.title = `${title} | Dhanna Enterprises`
+
+    const setMeta = (name, content) => {
+      let el = document.querySelector(`meta[name="${name}"]`)
+      if (!el) {
+        el = document.createElement('meta')
+        el.setAttribute('name', name)
+        document.head.appendChild(el)
+      }
+      el.setAttribute('content', content)
+    }
+
+    if (description) setMeta('description', description)
+    if (keywords) setMeta('keywords', keywords)
+
+  }, [title, description, keywords])
+
+  return null
 }
