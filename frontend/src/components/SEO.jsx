@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async'
 
 export default function SEO({ title, description, keywords }) {
   return (
-    <Helmet>
+    <Helmet prioritizeSeoTags>
       <title>{title} | Dhanna Enterprises</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
