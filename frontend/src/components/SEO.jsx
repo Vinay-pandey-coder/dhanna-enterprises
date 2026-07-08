@@ -10,7 +10,7 @@ export default function SEO({ title, description, keywords }) {
       <meta property="og:title" content={`${title} | Dhanna Enterprises`} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      {/* <meta property="og:url" content="https://dhanna-enterprises.vercel.app/" /> */}
+      <meta property="og:url" content="https://dhanna-enterprises.vercel.app/" />
       <link rel="canonical" href="https://dhanna-enterprises.vercel.app/" />
     </Helmet>
   )
