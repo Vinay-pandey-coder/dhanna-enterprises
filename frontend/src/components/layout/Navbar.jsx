@@ -56,7 +56,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-1">
+        <ul className="hidden lg:flex items-center gap-1">
           {links.map(link => {
             const isActive = location.pathname === link.to
             return (
@@ -78,11 +78,11 @@ export default function Navbar() {
         </ul>
 
         {/* Desktop Login/Register ya Logout */}
-        <div className="hidden md:flex items-center gap-2 shrink-0">
+        <div className="hidden lg:flex items-center gap-2 shrink-0">
           {isLoggedIn ? (
             <button onClick={handleLogout}
               className="px-4 py-2 rounded-lg text-1xl font-semibold"
-              style={{background: '#d4a017', color: '#050d1a'}}>
+              style={{ background: '#d4a017', color: '#050d1a' }}>
               Logout
             </button>
           ) : (
@@ -97,7 +97,7 @@ export default function Navbar() {
               </Link>
               <Link to="/register"
                 className="px-4 py-2 rounded-lg text-1xl font-semibold"
-                style={{background: '#d4a017', color: '#050d1a'}}>
+                style={{ background: '#d4a017', color: '#050d1a' }}>
                 Register
               </Link>
             </>
@@ -105,8 +105,8 @@ export default function Navbar() {
         </div>
 
         {/* Mobile hamburger */}
-        <button className="md:hidden text-2xl cursor-pointer"
-          style={{color: scrolled ? '#0f2044' : 'white'}}
+        <button className="lg:hidden text-2xl cursor-pointer"
+          style={{ color: scrolled ? '#0f2044' : 'white' }}
           onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? '✕' : '☰'}
         </button>
@@ -114,35 +114,35 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t px-6 py-4 flex flex-col gap-2"
-          style={{background: 'white', borderColor: '#e2e8f0'}}>
+        <div className="lg:hidden border-t px-6 py-4 flex flex-col gap-2"
+          style={{ background: 'white', borderColor: '#e2e8f0' }}>
           {links.map(link => (
             <Link key={link.label} to={link.to}
               onClick={() => setMenuOpen(false)}
               className="py-2 px-3 rounded-lg text-sm font-medium"
-              style={{color: '#0f2044'}}
-              onMouseOver={e => e.currentTarget.style.color='#d4a017'}
-              onMouseOut={e => e.currentTarget.style.color='#0f2044'}>
+              style={{ color: '#0f2044' }}
+              onMouseOver={e => e.currentTarget.style.color = '#d4a017'}
+              onMouseOut={e => e.currentTarget.style.color = '#0f2044'}>
               {link.label}
             </Link>
           ))}
-          <div className="flex gap-2 mt-2 pt-2" style={{borderTop: '1px solid #e2e8f0'}}>
+          <div className="flex gap-2 mt-2 pt-2" style={{ borderTop: '1px solid #e2e8f0' }}>
             {isLoggedIn ? (
               <button onClick={() => { handleLogout(); setMenuOpen(false) }}
                 className="flex-1 text-center py-2 rounded-lg text-sm font-semibold"
-                style={{background: '#d4a017', color: '#050d1a'}}>
+                style={{ background: '#d4a017', color: '#050d1a' }}>
                 Logout
               </button>
             ) : (
               <>
                 <Link to="/login" onClick={() => setMenuOpen(false)}
                   className="flex-1 text-center py-2 rounded-lg text-sm font-semibold"
-                  style={{border: '1.5px solid #0f2044', color: '#0f2044'}}>
+                  style={{ border: '1.5px solid #0f2044', color: '#0f2044' }}>
                   Login
                 </Link>
                 <Link to="/register" onClick={() => setMenuOpen(false)}
                   className="flex-1 text-center py-2 rounded-lg text-sm font-semibold"
-                  style={{background: '#d4a017', color: '#050d1a'}}>
+                  style={{ background: '#d4a017', color: '#050d1a' }}>
                   Register
                 </Link>
               </>
