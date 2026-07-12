@@ -54,7 +54,7 @@ export default function PanTan() {
       <div style={{background: '#f8f7f4'}} className="min-h-screen">
         <div className="py-16 px-6" style={{background: 'linear-gradient(135deg, #0f2044, #163060)'}}>
           <div className="max-w-5xl mx-auto">
-            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Our Services</p>
+            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Our Services</p>
 <h1 className="text-5xl font-bold text-white mb-4">PAN & TAN Services</h1>
 <p className="text-gray-300 max-w-2xl">New PAN card, corrections, TAN application and reprint — quick and accurate processing for all your PAN and TAN requirements.</p>
           </div>
@@ -73,23 +73,23 @@ export default function PanTan() {
               <p className="text-gray-600 leading-relaxed mb-6 ml-14">{s.what}</p>
               <div className="ml-14 grid md:grid-cols-3 gap-6">
                 <div>
-                  <h4 className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Who Needs This</h4>
-                  <ul className="space-y-1.5">{s.who.map(item => <li key={item} className="flex items-start gap-2 text-sm text-gray-600"><span style={{color: '#d4a017'}}>✦</span>{item}</li>)}</ul>
+                  <h4 className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Who Needs This</h4>
+                  <ul className="space-y-1.5">{s.who.map(item => <li key={item} className="flex items-start gap-2 text-sm text-gray-600"><span style={{color: '#08d24f'}}>✦</span>{item}</li>)}</ul>
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Documents Required</h4>
-                  <ul className="space-y-1.5">{s.docs.map(item => <li key={item} className="flex items-start gap-2 text-sm text-gray-600"><span style={{color: '#d4a017'}}>✦</span>{item}</li>)}</ul>
+                  <h4 className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Documents Required</h4>
+                  <ul className="space-y-1.5">{s.docs.map(item => <li key={item} className="flex items-start gap-2 text-sm text-gray-600"><span style={{color: '#08d24f'}}>✦</span>{item}</li>)}</ul>
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Our Process</h4>
-                  <ul className="space-y-1.5">{s.process.map((step, j) => <li key={step} className="flex items-start gap-2 text-sm text-gray-600"><span className="font-bold shrink-0" style={{color: '#d4a017'}}>{j+1}.</span>{step}</li>)}</ul>
+                  <h4 className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Our Process</h4>
+                  <ul className="space-y-1.5">{s.process.map((step, j) => <li key={step} className="flex items-start gap-2 text-sm text-gray-600"><span className="font-bold shrink-0" style={{color: '#08d24f'}}>{j+1}.</span>{step}</li>)}</ul>
                   <p className="text-xs mt-3 font-semibold" style={{color: '#0f2044'}}>Timeline: <span className="font-normal text-gray-500">{s.timeline}</span></p>
                 </div>
               </div>
               <div className="ml-14 mt-6 pt-5" style={{borderTop: '1px solid #f0ece4'}}>
                 <button onClick={handleGetStarted}
                   className="px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105"
-                  style={{background: '#d4a017', color: '#050d1a', border: 'none', cursor: 'pointer'}}>
+                  style={{background: '#08d24f', color: '#050d1a', border: 'none', cursor: 'pointer'}}>
                   Get Started with {s.title}
                 </button>
               </div>
@@ -104,7 +104,7 @@ export default function PanTan() {
               <p className="text-gray-400 mb-6">Get your PAN or TAN processed quickly — we handle the complete application process.</p>
             <button onClick={handleGetStarted}
               className="px-10 py-4 rounded-full font-bold text-sm transition-all hover:scale-105"
-              style={{background: '#d4a017', color: '#050d1a', border: 'none', cursor: 'pointer'}}>
+              style={{background: '#08d24f', color: '#050d1a', border: 'none', cursor: 'pointer'}}>
               Free WhatsApp Consultation
             </button>
           </div>

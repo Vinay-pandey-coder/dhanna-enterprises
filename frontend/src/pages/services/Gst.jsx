@@ -97,7 +97,7 @@ export default function Gst() {
         {/* Header */}
         <div className="py-16 px-6" style={{background: 'linear-gradient(135deg, #0f2044, #163060)'}}>
           <div className="max-w-5xl mx-auto">
-            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Our Services</p>
+            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Our Services</p>
             <h1 className="text-5xl font-bold text-white mb-4">GST Services</h1>
             <p className="text-gray-300 max-w-2xl">Complete GST lifecycle management — from registration to annual returns, amendments, notice replies and expert consultation.</p>
           </div>
@@ -120,31 +120,31 @@ export default function Gst() {
 
               <div className="ml-14 grid md:grid-cols-3 gap-6">
                 <div>
-                  <h4 className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Who Needs This</h4>
+                  <h4 className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Who Needs This</h4>
                   <ul className="space-y-1.5">
                     {s.who.map(item => (
                       <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
-                        <span style={{color: '#d4a017'}}>✦</span> {item}
+                        <span style={{color: '#08d24f'}}>✦</span> {item}
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Documents Required</h4>
+                  <h4 className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Documents Required</h4>
                   <ul className="space-y-1.5">
                     {s.docs.map(item => (
                       <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
-                        <span style={{color: '#d4a017'}}>✦</span> {item}
+                        <span style={{color: '#08d24f'}}>✦</span> {item}
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Our Process</h4>
+                  <h4 className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Our Process</h4>
                   <ul className="space-y-1.5">
                     {s.process.map((step, j) => (
                       <li key={step} className="flex items-start gap-2 text-sm text-gray-600">
-                        <span className="font-bold shrink-0" style={{color: '#d4a017'}}>{j + 1}.</span> {step}
+                        <span className="font-bold shrink-0" style={{color: '#08d24f'}}>{j + 1}.</span> {step}
                       </li>
                     ))}
                   </ul>
@@ -157,7 +157,7 @@ export default function Gst() {
               <div className="ml-14 mt-6 pt-5" style={{borderTop: '1px solid #f0ece4'}}>
                 <button onClick={handleGetStarted}
                   className="px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105"
-                  style={{background: '#d4a017', color: '#050d1a', border: 'none', cursor: 'pointer'}}>
+                  style={{background: '#08d24f', color: '#050d1a', border: 'none', cursor: 'pointer'}}>
                   Get Started with {s.title}
                 </button>
               </div>
@@ -173,7 +173,7 @@ export default function Gst() {
             <p className="text-gray-400 mb-6">Talk to our GST experts for free — we'll guide you to the right solution.</p>
             <button onClick={handleGetStarted}
               className="px-10 py-4 rounded-full font-bold text-sm transition-all hover:scale-105"
-              style={{background: '#d4a017', color: '#050d1a', border: 'none', cursor: 'pointer'}}>
+              style={{background: '#08d24f', color: '#050d1a', border: 'none', cursor: 'pointer'}}>
               Free WhatsApp Consultation
             </button>
           </div>
