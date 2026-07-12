@@ -12,7 +12,7 @@ export default function Privacy() {
       <div className="max-w-3xl mx-auto">
 
         <div className="text-center mb-12">
-          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Legal</p>
+          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#007B2B'}}>Legal</p>
           <h2 className="text-5xl font-bold mb-3" style={{color: '#0f2044'}}>Privacy Policy</h2>
           <p className="text-gray-400 text-sm">Last updated: January 2025</p>
         </div>
@@ -39,7 +39,7 @@ export default function Privacy() {
               <ul className="space-y-2">
                 {section.list.map(item => (
                   <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
-                    <span style={{color: '#d4a017'}}>✦</span> {item}
+                    <span style={{color: '#007B2B'}}>✦</span> {item}
                   </li>
                 ))}
               </ul>

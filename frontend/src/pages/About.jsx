@@ -34,10 +34,10 @@ const About = () => {
     <div style={{background: '#f8f7f4'}} className="min-h-screen">
 
       {/* Header band */}
-      <div className="py-20 px-6" style={{background: 'linear-gradient(135deg, #0f2044, #163060)'}}>
+      <div className="py-20 px-6" style={{background: '#081729'}}>
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 items-center">
           <div className="md:col-span-2">
-            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Our Story</p>
+            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Our Story</p>
             <h2 className="text-5xl font-bold mb-5 text-white">About Dhanna Enterprises</h2>
             <p className="text-gray-300 leading-relaxed">
               A trusted financial and business consultancy firm providing GST Registration, GST Return Filing,
@@ -46,7 +46,7 @@ const About = () => {
             </p>
           </div>
           <div className="border-l pl-8" style={{borderColor: 'rgba(212,160,23,0.3)'}}>
-            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Our Goal</p>
+            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Our Goal</p>
             <p className="text-white text-base leading-relaxed">
               Accurate, timely, and reliable services to individuals, startups, and businesses across India.
             </p>
@@ -60,7 +60,7 @@ const About = () => {
         <div className="mb-20">
           <div className="flex items-end justify-between mb-10 flex-wrap gap-3">
             <div>
-              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#d4a017'}}>Why Choose Us</p>
+              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#007B2B'}}>Why Choose Us</p>
               <h3 className="text-4xl font-bold" style={{color: '#0f2044'}}>What Makes Us Different</h3>
             </div>
           </div>
@@ -75,11 +75,11 @@ const About = () => {
               { icon: 'check', title: '100% Compliance', desc: 'All filings done accurately as per latest government rules and regulations.' },
             ].map((item, i) => (
               <div key={item.title} className="flex items-center gap-6 py-6 group cursor-default" style={{borderColor: '#e8e4dc'}}>
-                <span className="text-3xl font-bold w-12 shrink-0" style={{color: 'rgba(15,32,68,0.12)', fontFamily: 'Georgia, serif'}}>
+                <span className="text-3xl font-bold w-12 shrink-0" style={{color: '#007B2B', fontFamily: 'Georgia, serif'}}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <div className="w-11 h-11 rounded-full flex items-center justify-center shrink-0 transition-colors"
-                  style={{background: '#0f2044', color: '#d4a017'}}>
+                  style={{background: '#102d50', color: '#fff'}}>
                   <Icon path={icons[item.icon]} size={19} />
                 </div>
                 <div className="flex-1">
@@ -93,7 +93,7 @@ const About = () => {
 
         {/* Services — pill tags */}
         <div className="mb-20">
-          <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#d4a017'}}>What We Offer</p>
+          <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#08d24f'}}>What We Offer</p>
           <h3 className="text-4xl font-bold mb-8" style={{color: '#0f2044'}}>Our Services</h3>
 
           <div className="flex flex-wrap gap-3">
@@ -118,14 +118,14 @@ const About = () => {
           style={{border: '1px solid #e8e4dc', boxShadow: '0 4px 24px rgba(0,0,0,0.06)'}}>
 
           <div className="p-10" style={{background: 'linear-gradient(135deg, #0f2044, #163060)'}}>
-            <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#d4a017'}}>Reach Us</p>
+            <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#08d24f'}}>Reach Us</p>
             <h3 className="text-3xl font-bold mb-5 text-white">Let's Talk</h3>
             <p className="text-gray-300 text-sm leading-relaxed mb-8">
               Have a question or ready to get started? Reach out — our team responds quickly.
             </p>
             <a href="https://wa.me/918287746345" target="_blank" rel="noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-bold text-sm transition-all hover:gap-3"
-              style={{background: '#d4a017', color: '#050d1a'}}>
+              style={{background: '#08d24f', color: '#fff'}}>
               Chat on WhatsApp <Icon path={icons.arrow} size={16}/>
             </a>
           </div>
@@ -139,7 +139,7 @@ const About = () => {
             ].map(item => (
               <div key={item.label}>
                 <div className="w-9 h-9 rounded-lg flex items-center justify-center mb-3"
-                  style={{background: 'rgba(212,160,23,0.1)', color: '#d4a017'}}>
+                  style={{background: '#102d50', color: '#fff'}}>
                   <Icon path={icons[item.icon]} size={16} />
                 </div>
                 <p className="text-xs text-gray-400 mb-0.5">{item.label}</p>

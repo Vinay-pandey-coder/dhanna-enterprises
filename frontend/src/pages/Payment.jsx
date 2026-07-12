@@ -6,7 +6,7 @@ export default function Payment() {
       <div className="max-w-5xl mx-auto">
 
         <div className="text-center mb-14">
-          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Easy & Secure</p>
+          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#007B2B'}}>Easy & Secure</p>
           <h2 className="text-5xl font-bold mb-3" style={{color: '#0f2044'}}>Online Payment</h2>
           <p className="text-gray-500">Pay quickly and securely using Any UPI App</p>
         </div>
@@ -17,7 +17,7 @@ export default function Payment() {
           <div className="rounded-3xl p-8 text-center"
             style={{background: 'white', boxShadow: '0 8px 40px rgba(0,0,0,0.08)', border: '1px solid #e8e4dc'}}>
             <div className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6"
-              style={{background: 'rgba(212,160,23,0.1)', color: '#d4a017', border: '1px solid rgba(212,160,23,0.2)'}}>
+              style={{background: 'rgba(212,160,23,0.1)', color: '#007B2B', border: '1px solid rgba(212,160,23,0.2)'}}>
               PhonePe / UPI
             </div>
             <p className="text-sm font-semibold mb-4" style={{color: '#0f2044'}}>Scan & Pay Using PhonePe App</p>
@@ -42,7 +42,7 @@ export default function Payment() {
               { step: '04', title: 'Share Payment Screenshot', desc: 'Send the payment confirmation to us on WhatsApp for quick processing.' },
             ].map(item => (
               <div key={item.step} className="flex gap-4 mb-6">
-                <span className="text-2xl font-bold shrink-0 w-10" style={{color: '#d4a017', fontFamily: 'Cormorant Garamond, serif'}}>
+                <span className="text-2xl font-bold shrink-0 w-10" style={{color: '#007B2B', fontFamily: 'Cormorant Garamond, serif'}}>
                   {item.step}
                 </span>
                 <div>

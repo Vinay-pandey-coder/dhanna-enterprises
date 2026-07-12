@@ -4,7 +4,7 @@ export default function GoogleForm() {
       <div className="max-w-4xl mx-auto">
 
         <div className="text-center mb-14">
-          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Join Us</p>
+          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#007B2B'}}>Join Us</p>
           <h2 className="text-5xl font-bold mb-3" style={{color: '#0f2044'}}>Client Registration</h2>
           <p className="text-gray-500 max-w-lg mx-auto">Fill out the form and our team will contact you within 24 hours to get started.</p>
         </div>
@@ -19,7 +19,7 @@ export default function GoogleForm() {
             <div key={item.step} className="rounded-2xl p-6 text-center"
               style={{background: 'white', border: '1px solid #e8e4dc', boxShadow: '0 2px 12px rgba(0,0,0,0.04)'}}>
               <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold mx-auto mb-4"
-                style={{background: 'rgba(212,160,23,0.1)', color: '#d4a017', border: '2px solid #d4a017'}}>
+                style={{background: '#144d92', color: '#fff', border: '#007B2B'}}>
                 {item.step}
               </div>
               <div className="text-3xl mb-3">{item.icon}</div>
@@ -37,8 +37,11 @@ export default function GoogleForm() {
           <a href="YOUR_GOOGLE_FORM_LINK"
             target="_blank" rel="noreferrer"
             className="inline-block px-12 py-4 rounded-full font-bold text-sm transition-all hover:scale-105"
-            style={{background: '#d4a017', color: '#050d1a', boxShadow: '0 8px 30px rgba(212,160,23,0.3)'}}>
-            📝 Open Registration Form
+            style={{background: '#007B2B', color: '#fff', boxShadow: '0 8px 30px rgba(212,160,23,0.3)'}}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 inline" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
+            </svg>
+            Open Registration Form
           </a>
           <p className="text-gray-500 text-xs mt-4">Free consultation • No obligation • Quick response</p>
         </div>

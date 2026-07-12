@@ -13,7 +13,7 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto">
 
         <div className="text-center mb-14">
-          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Get In Touch</p>
+          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#007B2B'}}>Get In Touch</p>
           <h2 className="text-5xl font-bold mb-3" style={{color: '#0f2044'}}>Contact Us</h2>
           <p className="text-gray-500">We're here Mon–Sat, 10 AM to 7 PM. Reach us through any channel below.</p>
         </div>
@@ -30,7 +30,7 @@ export default function Contact() {
               style={{background: 'white', border: '1px solid #e8e4dc', boxShadow: '0 2px 12px rgba(0,0,0,0.04)'}}>
               <div className="text-4xl mb-4">{card.icon}</div>
               <h3 className="font-bold mb-1" style={{color: '#0f2044'}}>{card.title}</h3>
-              <p className="font-semibold text-sm mb-1" style={{color: '#d4a017'}}>{card.info}</p>
+              <p className="font-semibold text-sm mb-1" style={{color: '#007B2B'}}>{card.info}</p>
               <p className="text-xs text-gray-400">{card.sub}</p>
             </a>
           ))}
@@ -43,7 +43,7 @@ export default function Contact() {
           <p className="text-gray-400 mb-6">Send us a message and our team will respond within minutes.</p>
           <a href="https://wa.me/918287746345" target="_blank" rel="noreferrer"
             className="inline-block px-10 py-4 rounded-full font-bold text-sm transition-all hover:scale-105"
-            style={{background: '#d4a017', color: '#050d1a', boxShadow: '0 8px 30px rgba(212,160,23,0.3)'}}>
+            style={{background: '#007B2B', color: '#fff', boxShadow: '0 8px 30px rgba(212,160,23,0.3)'}}>
             💬 WhatsApp Support
           </a>
         </div>

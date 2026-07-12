@@ -36,7 +36,7 @@ const Home = () => {
       />
       {/* ===== HERO ===== */}
       <div className="relative overflow-hidden" style={{
-        background: 'linear-gradient(135deg, #050d1a 0%, #0f2044 50%, #163060 100%)',
+        background: '#081729',
         minHeight: '88vh',
         display: 'flex',
         alignItems: 'center'
@@ -48,25 +48,28 @@ const Home = () => {
           `
         }}/>
         <div className="absolute right-0 top-0 w-96 h-96 rounded-full opacity-5"
-          style={{background: '#d4a017', transform: 'translate(30%, -30%)'}}/>
+          style={{background: '#007B2B', transform: 'translate(30%, -30%)'}}/>
         <div className="absolute left-0 bottom-0 w-64 h-64 rounded-full opacity-5"
-          style={{background: '#d4a017', transform: 'translate(-30%, 30%)'}}/>
+          style={{background: '#007B2B', transform: 'translate(-30%, 30%)'}}/>
 
         <div className="relative max-w-6xl mx-auto px-6 py-20 w-full">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full text-xs font-semibold tracking-widest uppercase"
-              style={{background: 'rgba(212,160,23,0.15)', border: '1px solid rgba(212,160,23,0.3)', color: '#d4a017'}}>
-              ⭐ Trusted Tax & Business Solutions
+              style={{background: '#007B2B', border: '1px solid rgba(212,160,23,0.3)', color: 'white'}}>
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              Trusted Tax & Business Solutions
             </div>
 
             <h1 className="text-white font-bold leading-none mb-6"
               style={{fontSize: 'clamp(3rem, 8vw, 6rem)', fontFamily: 'Georgia, serif'}}>
               FREE ITR<br/>
-              <span style={{color: '#d4a017'}}>FILING</span> <span className="text-white">STARTED!</span>
+              <span style={{color: '#007B2B'}}>FILING</span> <span className="text-white">STARTED!</span>
             </h1>
 
             <p className="mb-4 font-medium tracking-widest text-sm uppercase"
-              style={{color: 'rgba(212,160,23,0.7)'}}>
+              style={{color: '#007B2B'}}>
               GST &bull; ITR &bull; Accounting &bull; Audit &bull; MSME Registration
             </p>
 
@@ -79,8 +82,8 @@ const Home = () => {
             <div className="flex flex-wrap gap-4">
               <a href="https://wa.me/918287746345" target="_blank" rel="noreferrer"
                 className="flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-sm transition-all hover:scale-105"
-                style={{background: '#d4a017', color: '#050d1a', boxShadow: '0 8px 30px rgba(212,160,23,0.35)'}}>
-                💬 Chat on WhatsApp
+                style={{background: '#007B2B', color: '#fff', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more-icon lucide-message-circle-more"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg> Chat on WhatsApp
               </a>
               <a href="/services"
                 className="flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-sm transition-all hover:scale-105"
@@ -98,7 +101,7 @@ const Home = () => {
             ].map(s => (
               <div key={s.l} className="rounded-2xl p-4 text-center"
                 style={{background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(212,160,23,0.2)', backdropFilter: 'blur(10px)'}}>
-                <p className="text-2xl font-bold" style={{color: '#d4a017', fontFamily: 'Georgia, serif'}}>{s.n}</p>
+                <p className="text-2xl font-bold" style={{color: '#007B2B', fontFamily: 'Georgia, serif'}}>{s.n}</p>
                 <p className="text-xs mt-1" style={{color: 'rgba(255,255,255,0.5)'}}>{s.l}</p>
               </div>
             ))}
@@ -112,11 +115,11 @@ const Home = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
 
             <div>
-              <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Who We Are</p>
+              <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#007B2B'}}>Who We Are</p>
               <h2 className="text-5xl font-bold mb-6 leading-tight" style={{color: '#0f2044'}}>
                 Welcome to<br/>Dhanna Enterprises
               </h2>
-              <div className="w-16 h-1 mb-6 rounded" style={{background: '#d4a017'}}/>
+              <div className="w-16 h-1 mb-6 rounded" style={{background: '#007B2B'}}/>
               <p className="text-gray-600 leading-relaxed mb-6">
                 We provide complete financial and business solutions for Individuals, Businesses & Professionals.
                 From GST Filing and ITR to Accounting, Audit, MSME Registration and Tax Consultancy — we handle it all.
@@ -142,7 +145,7 @@ const Home = () => {
                 <div key={card.title} className="rounded-2xl p-6"
                   style={{background: 'white', border: '1px solid #e8e4dc', boxShadow: '0 2px 12px rgba(0,0,0,0.05)'}}>
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3"
-                    style={{background: 'rgba(212,160,23,0.1)', color: '#d4a017'}}>
+                    style={{background: '#007B2B', color: 'white'}}>
                     <Icon path={icons[card.icon]} size={18} />
                   </div>
                   <h4 className="font-bold mb-1 text-sm" style={{color: '#0f2044'}}>{card.title}</h4>
@@ -158,20 +161,20 @@ const Home = () => {
       <div className="py-24 px-6" style={{background: 'white'}}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#d4a017'}}>What We Offer</p>
+            <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#007B2B'}}>What We Offer</p>
             <h3 className="text-4xl font-bold" style={{color: '#0f2044'}}>Our Core Services</h3>
           </div>
 
           <div className="grid md:grid-cols-2 gap-5 mb-10">
             {[
-              { icon: 'itr', color: '#0f2044', title: 'Income Tax Returns (ITR)', desc: 'Salaried | Business | Capital Gain | Other Sources' },
-              { icon: 'gst', color: '#1e3a8a', title: 'GST Registration & Filing', desc: 'New Registration | Return Filing | GST Compliance' },
-              { icon: 'account', color: '#b8860b', title: 'Accounting & Bookkeeping', desc: 'Complete Accounting Solutions' },
-              { icon: 'audit', color: '#0f2044', title: 'Audit & Compliance', desc: 'Audit | TDS | Internal Compliance' },
+              { icon: 'itr', color: '#007B2B', title: 'Income Tax Returns (ITR)', desc: 'Salaried | Business | Capital Gain | Other Sources' },
+              { icon: 'gst', color: '#007B2B', title: 'GST Registration & Filing', desc: 'New Registration | Return Filing | GST Compliance' },
+              { icon: 'account', color: '#007B2B', title: 'Accounting & Bookkeeping', desc: 'Complete Accounting Solutions' },
+              { icon: 'audit', color: '#007B2B', title: 'Audit & Compliance', desc: 'Audit | TDS | Internal Compliance' },
             ].map(s => (
               <div key={s.title} className="flex items-center gap-5 p-6 rounded-2xl transition-all"
                 style={{background: '#f8f7f4', border: '1px solid #e8e4dc'}}
-                onMouseOver={e => { e.currentTarget.style.borderColor = '#d4a017'; e.currentTarget.style.transform = 'translateY(-2px)' }}
+                onMouseOver={e => { e.currentTarget.style.borderColor = '#007B2B'; e.currentTarget.style.transform = 'translateY(-2px)' }}
                 onMouseOut={e => { e.currentTarget.style.borderColor = '#e8e4dc'; e.currentTarget.style.transform = 'translateY(0)' }}>
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0"
                   style={{background: s.color, color: 'white'}}>
@@ -195,7 +198,7 @@ const Home = () => {
             ].map(t => (
               <div key={t.title} className="flex items-center gap-3 p-4 rounded-xl"
                 style={{background: '#f8f7f4', border: '1px solid #e8e4dc'}}>
-                <span style={{color: '#d4a017'}}><Icon path={icons[t.icon]} size={20} /></span>
+                <span style={{color: '#007B2B'}}><Icon path={icons[t.icon]} size={20} /></span>
                 <span className="text-sm font-semibold" style={{color: '#0f2044'}}>{t.title}</span>
               </div>
             ))}
@@ -203,7 +206,7 @@ const Home = () => {
 
           {/* Other services tags */}
           <div className="text-center mb-8">
-            <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#d4a017'}}>And Many More</p>
+            <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#007B2B'}}>And Many More</p>
             <h3 className="text-3xl font-bold" style={{color: '#0f2044'}}>Other Services We Offer</h3>
           </div>
           <div className="flex flex-wrap justify-center gap-3 mb-12">

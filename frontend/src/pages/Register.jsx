@@ -57,7 +57,7 @@ export default function Register() {
           </button>
         </form>
         <p className="text-sm text-center mt-4 text-gray-500">
-          Already have an account? <a href="/login" style={{color: '#d4a017'}}>Login</a>
+          Already have an account? <a href="/login" style={{color: '#007B2B'}}>Login</a>
         </p>
       </div>
     </div>

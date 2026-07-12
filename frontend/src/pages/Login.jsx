@@ -40,7 +40,7 @@ export default function Login() {
           </button>
         </form>
         <p className="text-sm text-center mt-4 text-gray-500">
-          No account? <a href="/register" style={{color: '#d4a017'}}>Register</a>
+          No account? <a href="/register" style={{color: '#007B2B'}}>Register</a>
         </p>
       </div>
     </div>

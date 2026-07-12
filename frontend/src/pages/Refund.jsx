@@ -13,7 +13,7 @@ export default function Refund() {
       <div className="max-w-3xl mx-auto">
 
         <div className="text-center mb-12">
-          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#d4a017'}}>Legal</p>
+          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#007B2B'}}>Legal</p>
           <h2 className="text-5xl font-bold mb-3" style={{color: '#0f2044'}}>Refund & Cancellation Policy</h2>
           <p className="text-gray-400 text-sm">Last updated: January 2025</p>
         </div>
@@ -31,7 +31,7 @@ export default function Refund() {
               'For customized professional services, work already started or delivered is not refundable.',
             ].map(point => (
               <li key={point} className="flex items-start gap-3 text-sm text-gray-600 leading-relaxed">
-                <span style={{color: '#d4a017'}} className="mt-0.5">✦</span> {point}
+                <span style={{color: '#007B2B'}} className="mt-0.5">✦</span> {point}
               </li>
             ))}
           </ul>

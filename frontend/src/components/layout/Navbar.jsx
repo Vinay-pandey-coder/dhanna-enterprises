@@ -41,7 +41,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled ? 'rgba(255,255,255,0.97)' : '#0f2044',
+        background: scrolled ? 'rgba(255,255,255,0.97)' : '#032855',
         boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.1)' : 'none',
         backdropFilter: scrolled ? 'blur(10px)' : 'none'
       }}>
@@ -49,7 +49,7 @@ export default function Navbar() {
         <Link to="/" className="font-bold text-lg tracking-wide shrink-0"
           style={{
             fontFamily: 'Georgia, serif',
-            color: scrolled ? '#0f2044' : '#d4a017',
+            color: scrolled ? '#032855' : '#08d24f',
             letterSpacing: '0.05em'
           }}>
           Dhanna Enterprises
@@ -64,11 +64,11 @@ export default function Navbar() {
                 <Link to={link.to}
                   className="px-3 py-2 rounded-lg text-1xl font-medium transition-all duration-200"
                   style={{
-                    color: isActive ? '#d4a017' : scrolled ? '#0f2044' : 'rgba(255,255,255,0.85)',
+                    color: isActive ? '#fff' : scrolled ? '#0f2044' : 'rgba(255,255,255,0.85)',
                     background: isActive
-                      ? scrolled ? 'rgba(212,160,23,0.1)' : 'rgba(212,160,23,0.15)'
+                      ? scrolled ? '#007B2B' : '#007B2B'
                       : 'transparent',
-                    borderBottom: isActive ? '2px solid #d4a017' : '2px solid transparent'
+                    borderBottom: isActive ? '2px solid #007B2B' : '2px solid transparent'
                   }}>
                   {link.label}
                 </Link>
@@ -82,7 +82,7 @@ export default function Navbar() {
           {isLoggedIn ? (
             <button onClick={handleLogout}
               className="px-4 py-2 rounded-lg text-1xl font-semibold"
-              style={{ background: '#d4a017', color: '#050d1a' }}>
+              style={{ background: '#007B2B', color: '#fff' }}>
               Logout
             </button>
           ) : (
@@ -97,7 +97,7 @@ export default function Navbar() {
               </Link>
               <Link to="/register"
                 className="px-4 py-2 rounded-lg text-1xl font-semibold"
-                style={{ background: '#d4a017', color: '#050d1a' }}>
+                style={{ background: '#007B2B', color: '#fff' }}>
                 Register
               </Link>
             </>

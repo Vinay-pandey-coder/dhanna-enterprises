@@ -6,10 +6,10 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-10 pb-10 border-b border-gray-800">
           <div>
-            <h3 className="text-xl font-bold mb-2" style={{color: '#d4a017', fontFamily: 'Georgia, serif'}}>
+            <h3 className="text-lg font-bold mb-2" style={{color: '#007B2B', fontFamily: 'Georgia, serif'}}>
               Dhanna Enterprises
             </h3>
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-lg text-gray-400 leading-relaxed">
               Trusted tax & financial solutions for individuals and businesses across India.
             </p>
           </div>
@@ -24,7 +24,7 @@ export default function Footer() {
                 { label: 'Contact', to: '/contact' },
               ].map(l => (
                 <Link key={l.label} to={l.to}
-                  className="text-sm text-gray-400 hover:text-yellow-400 transition-colors w-fit">
+                  className="text-lg text-gray-400 hover:text-green-400 transition-colors w-fit">
                   {l.label}
                 </Link>
               ))}
@@ -33,24 +33,24 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-sm mb-4 text-gray-300">Contact</h4>
             <div className="flex flex-col gap-2 text-sm text-gray-400">
-              <a href="tel:8287746345" className="hover:text-yellow-400 transition-colors">📞 8287746345</a>
-              <a href="mailto:support.dhanna@gmail.com" className="hover:text-yellow-400 transition-colors">✉️ support.dhanna@gmail.com</a>
-              <p>🕐 Mon–Sat | 10 AM – 7 PM</p>
+              <a href="tel:8287746345" className="hover:text-green-400 transition-colors text-lg">📞 8287746345</a>
+              <a href="mailto:support.dhanna@gmail.com" className="hover:text-green-400 text-lg transition-colors">✉️ support.dhanna@gmail.com</a>
+              <p className='text-lg'>🕐 Mon–Sat | 10 AM – 7 PM</p>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-gray-600">
+          <p className="text-lg text-gray-600">
             © 2025 <span className="text-gray-400 font-medium">Dhanna Enterprises</span> | All Rights Reserved
           </p>
           <div className="flex items-center gap-4">
-            <Link to="/terms" target='_blank' className="text-xs text-gray-500 hover:text-yellow-400 transition-colors">Terms & Conditions</Link>
+            <Link to="/terms" target='_blank' className="text-lg text-gray-500 hover:text-green-400 transition-colors">Terms & Conditions</Link>
             <span className="text-gray-700 text-xs">|</span>
-            <Link to="/privacy" target='_blank' className="text-xs text-gray-500 hover:text-yellow-400 transition-colors">Privacy Policy</Link>
+            <Link to="/privacy" target='_blank' className="text-lg text-gray-500 hover:text-green-400 transition-colors">Privacy Policy</Link>
             <span className="text-gray-700 text-xs">|</span>
-            <Link to="/refund-policy" target='_blank' className="text-xs text-gray-500 hover:text-yellow-400 transition-colors">Refund Policy</Link>
+            <Link to="/refund-policy" target='_blank' className="text-lg text-gray-500 hover:text-green-400 transition-colors">Refund Policy</Link>
           </div>
         </div>
       </div>
