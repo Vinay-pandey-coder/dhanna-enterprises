@@ -41,18 +41,17 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled ? 'rgba(255,255,255,0.97)' : '#032855',
+        background: scrolled ? 'rgba(255,255,255,0.97)' : '#003576ff',
         boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.1)' : 'none',
         backdropFilter: scrolled ? 'blur(10px)' : 'none'
       }}>
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        <Link to="/" className="font-bold text-lg tracking-wide shrink-0"
-          style={{
-            fontFamily: 'Georgia, serif',
-            color: scrolled ? '#032855' : '#08d24f',
-            letterSpacing: '0.05em'
-          }}>
-          Dhanna Enterprises
+        <Link to="/" className="flex items-center gap-2 shrink-0">
+          <img src="/images/logo.webp" alt="Dhanna Enterprises" className="h-10 w-10 object-contain" />
+          <span className="font-bold text-lg tracking-wide"
+            style={{ fontFamily: 'Georgia, serif', color: scrolled ? '#0f2044' : '#08d24f' }}>
+            Dhanna Enterprises
+          </span>
         </Link>
 
         {/* Desktop links */}

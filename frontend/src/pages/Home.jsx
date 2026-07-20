@@ -64,7 +64,7 @@ const Home = () => {
 
             <h1 className="text-white font-bold leading-none mb-6"
               style={{fontSize: 'clamp(3rem, 8vw, 6rem)', fontFamily: 'Georgia, serif'}}>
-              FREE ITR<br/>
+              ITR<br/>
               <span style={{color: '#007B2B'}}>FILING</span> <span className="text-white">STARTED!</span>
             </h1>
 

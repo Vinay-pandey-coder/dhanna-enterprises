@@ -33,63 +33,85 @@ const About = () => {
 />
     <div style={{background: '#f8f7f4'}} className="min-h-screen">
 
-      {/* Header band */}
-      <div className="py-20 px-6" style={{background: '#081729'}}>
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 items-center">
-          <div className="md:col-span-2">
-            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Our Story</p>
-            <h2 className="text-5xl font-bold mb-5 text-white">About Dhanna Enterprises</h2>
-            <p className="text-gray-300 leading-relaxed">
-              A trusted financial and business consultancy firm providing GST Registration, GST Return Filing,
-              Income Tax Return (ITR), Accounting & Bookkeeping, MSME Registration, FSSAI License, IEC Registration,
-              DSC Services, Trademark Registration, and other business compliance solutions.
-            </p>
-          </div>
-          <div className="border-l pl-8" style={{borderColor: 'rgba(212,160,23,0.3)'}}>
-            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Our Goal</p>
-            <p className="text-white text-base leading-relaxed">
-              Accurate, timely, and reliable services to individuals, startups, and businesses across India.
-            </p>
-          </div>
-        </div>
-      </div>
+
+{/* Header band */}
+<div className="py-20 px-6 relative overflow-hidden" style={{background: '#081729'}}>
+
+  {/* Background image — subtle */}
+  <div className="absolute inset-0 opacity-10"
+    style={{
+      backgroundImage: 'url(/images/about.webp)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  />
+
+  <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 items-center relative">
+    <div className="md:col-span-2">
+      <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Our Story</p>
+      <h2 className="text-5xl font-bold mb-5 text-white">About Dhanna Enterprises</h2>
+      <p className="text-gray-300 leading-relaxed">
+        A trusted financial and business consultancy firm providing GST Registration, GST Return Filing,
+        Income Tax Return (ITR), Accounting & Bookkeeping, MSME Registration, FSSAI License, IEC Registration,
+        DSC Services, Trademark Registration, and other business compliance solutions.
+      </p>
+    </div>
+    <div className="border-l pl-8" style={{borderColor: 'rgba(212,160,23,0.3)'}}>
+      <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Our Goal</p>
+      <p className="text-white text-base leading-relaxed">
+        Accurate, timely, and reliable services to individuals, startups, and businesses across India.
+      </p>
+    </div>
+  </div>
+</div>
 
       <div className="max-w-5xl mx-auto px-6 py-20">
 
-        {/* Why Choose Us — numbered list */}
-        <div className="mb-20">
-          <div className="flex items-end justify-between mb-10 flex-wrap gap-3">
-            <div>
-              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#007B2B'}}>Why Choose Us</p>
-              <h3 className="text-4xl font-bold" style={{color: '#0f2044'}}>What Makes Us Different</h3>
-            </div>
-          </div>
+{/* Why Choose Us */}
+<div className="mb-20 relative rounded-3xl overflow-hidden px-8 py-10"
+  style={{
+    backgroundImage: 'url(/images/about2.webp)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }}>
 
-          <div className="divide-y" style={{borderColor: '#e8e4dc'}}>
-            {[
-              { icon: 'award', title: 'Professional Services', desc: 'Expert team handling all your compliance and financial needs with precision.' },
-              { icon: 'clock', title: 'Timely Delivery', desc: 'We respect your deadlines and ensure work is completed on time, every time.' },
-              { icon: 'lock', title: 'Confidential Data Handling', desc: 'Your personal and business data is handled with the highest level of security.' },
-              { icon: 'rupee', title: 'Affordable Pricing', desc: 'Quality services at transparent and pocket-friendly prices — no hidden charges.' },
-              { icon: 'headset', title: 'Dedicated Support', desc: 'Our team is always available to answer queries and guide you through every step.' },
-              { icon: 'check', title: '100% Compliance', desc: 'All filings done accurately as per latest government rules and regulations.' },
-            ].map((item, i) => (
-              <div key={item.title} className="flex items-center gap-6 py-6 group cursor-default" style={{borderColor: '#e8e4dc'}}>
-                <span className="text-3xl font-bold w-12 shrink-0" style={{color: '#007B2B', fontFamily: 'Georgia, serif'}}>
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <div className="w-11 h-11 rounded-full flex items-center justify-center shrink-0 transition-colors"
-                  style={{background: '#102d50', color: '#fff'}}>
-                  <Icon path={icons[item.icon]} size={19} />
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-bold mb-1" style={{color: '#0f2044'}}>{item.title}</h4>
-                  <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+  {/* Dark overlay */}
+  <div className="absolute inset-0 rounded-3xl" style={{background: 'rgba(8, 23, 41, 0.88)'}}/>
+
+  <div className="relative">
+    <div className="flex items-end justify-between mb-10 flex-wrap gap-3">
+      <div>
+        <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{color: '#08d24f'}}>Why Choose Us</p>
+        <h3 className="text-4xl font-bold text-white">What Makes Us Different</h3>
+      </div>
+    </div>
+
+    <div className="divide-y" style={{borderColor: 'rgba(255,255,255,0.1)'}}>
+      {[
+        { icon: 'award', title: 'Professional Services', desc: 'Expert team handling all your compliance and financial needs with precision.' },
+        { icon: 'clock', title: 'Timely Delivery', desc: 'We respect your deadlines and ensure work is completed on time, every time.' },
+        { icon: 'lock', title: 'Confidential Data Handling', desc: 'Your personal and business data is handled with the highest level of security.' },
+        { icon: 'rupee', title: 'Affordable Pricing', desc: 'Quality services at transparent and pocket-friendly prices — no hidden charges.' },
+        { icon: 'headset', title: 'Dedicated Support', desc: 'Our team is always available to answer queries and guide you through every step.' },
+        { icon: 'check', title: '100% Compliance', desc: 'All filings done accurately as per latest government rules and regulations.' },
+      ].map((item, i) => (
+        <div key={item.title} className="flex items-center gap-6 py-6 cursor-default">
+          <span className="text-3xl font-bold w-12 shrink-0" style={{color: '#08d24f', fontFamily: 'Georgia, serif'}}>
+            {String(i + 1).padStart(2, '0')}
+          </span>
+          <div className="w-11 h-11 rounded-full flex items-center justify-center shrink-0"
+            style={{background: '#102d50', color: '#fff'}}>
+            <Icon path={icons[item.icon]} size={19} />
+          </div>
+          <div className="flex-1">
+            <h4 className="font-bold mb-1 text-white">{item.title}</h4>
+            <p className="text-sm text-gray-300 leading-relaxed">{item.desc}</p>
           </div>
         </div>
+      ))}
+    </div>
+  </div>
+</div>
 
         {/* Services — pill tags */}
         <div className="mb-20">

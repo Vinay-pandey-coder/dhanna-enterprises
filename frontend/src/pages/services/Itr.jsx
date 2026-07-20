@@ -101,10 +101,23 @@ export default function Itr() {
       />
       <div style={{background: '#f8f7f4'}} className="min-h-screen">
         <div className="py-16 px-6" style={{background: 'linear-gradient(135deg, #0f2044, #163060)'}}>
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+            <div>
             <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{color: '#08d24f'}}>Our Services</p>
             <h1 className="text-5xl font-bold text-white mb-4">Income Tax (ITR) Services</h1>
             <p className="text-gray-300 max-w-2xl">Accurate and on-time ITR filing for individuals, businesses and NRIs — with complete tax planning and notice handling support.</p>
+            </div>
+
+    <div className="hidden md:flex justify-center">
+      <img
+        src="/images/itr.webp"
+        alt="ITR Services"
+        className="w-full max-w-sm object-contain rounded-2xl"
+        style={{maxHeight: '280px'}}
+      />
+    </div>
+
           </div>
         </div>
 

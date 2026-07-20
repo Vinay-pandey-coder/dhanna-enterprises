@@ -2,13 +2,17 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer style={{background: '#050d1a'}} className="text-white pt-12 pb-6 px-6">
+    <footer style={{ background: '#050d1a' }} className="text-white pt-12 pb-6 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-10 pb-10 border-b border-gray-800">
           <div>
-            <h3 className="text-lg font-bold mb-2" style={{color: '#007B2B', fontFamily: 'Georgia, serif'}}>
-              Dhanna Enterprises
-            </h3>
+            <div className="flex items-center gap-2 mb-2">
+              <img src="/images/logo.webp" alt="Dhanna Enterprises" className="h-8 w-8 object-contain" />
+              <h3 className="text-xl font-bold" style={{ color: '#08d24f', fontFamily: 'Georgia, serif' }}>
+                Dhanna Enterprises
+              </h3>
+            </div>
+
             <p className="text-lg text-gray-400 leading-relaxed">
               Trusted tax & financial solutions for individuals and businesses across India.
             </p>
