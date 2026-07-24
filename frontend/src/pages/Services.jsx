@@ -88,6 +88,11 @@ const allServices = [
     desc: 'TDS return filing, corrections, Form 16/16A and notice replies handled accurately.',
     link: '/services/tds'
   },
+  {
+  icon: 'biz', color: '#1e3a8a', title: 'Shop Act Registration',
+  desc: 'Complete Shop & Establishment Act registration — new registration, renewal, amendments and compliance for businesses across India.',
+  link: '/services/shop-act'
+},
 ]
 
 export default function Services() {

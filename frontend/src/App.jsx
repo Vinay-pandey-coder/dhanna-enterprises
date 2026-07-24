@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import { AuthProvider } from './context/AuthContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import UserProtectedRoute from './components/UserProtectedRoute'
@@ -32,6 +33,7 @@ import Trademark from './pages/services/Trademark'
 import Dsc from './pages/services/Dsc'
 import PanTan from './pages/services/PanTan'
 import Tds from './pages/services/Tds'
+import ShopAct from './pages/services/ShopAct'
 
 function Layout({ children }) {
   return (
@@ -44,9 +46,18 @@ function Layout({ children }) {
   )
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [pathname])
+  return null
+}
+
 export default function App() {
   return (
     <AuthProvider>
+      <ScrollToTop />
       <Routes>
         {/* Admin — no layout */}
         <Route path="/admin/login" element={<AdminLogin />} />
@@ -78,6 +89,7 @@ export default function App() {
         <Route path="/services/dsc" element={<Layout><Dsc /></Layout>} />
         <Route path="/services/pan-tan" element={<Layout><PanTan /></Layout>} />
         <Route path="/services/tds" element={<Layout><Tds /></Layout>} />
+        <Route path="/services/shop-act" element={<Layout><ShopAct /></Layout>} />
 
         {/* Login ke baad dikhne wale pages */}
         <Route path="/payment" element={

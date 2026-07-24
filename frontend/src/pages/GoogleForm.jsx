@@ -34,7 +34,7 @@ export default function GoogleForm() {
           style={{background: 'linear-gradient(135deg, #0f2044, #163060)', border: '1px solid rgba(212,160,23,0.2)'}}>
           <h3 className="text-3xl font-bold text-white mb-3">Ready to Get Started?</h3>
           <p className="text-gray-400 mb-8 max-w-md mx-auto">Click below to open the registration form. Takes less than 2 minutes.</p>
-          <a href="YOUR_GOOGLE_FORM_LINK"
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScN0mnJiRQDSLd75B5ooqQSSJnS0Dfr_Hg72sDVESuqd9Q1kw/viewform?usp=dialog"
             target="_blank" rel="noreferrer"
             className="inline-block px-12 py-4 rounded-full font-bold text-sm transition-all hover:scale-105"
             style={{background: '#007B2B', color: '#fff', boxShadow: '0 8px 30px rgba(212,160,23,0.3)'}}>

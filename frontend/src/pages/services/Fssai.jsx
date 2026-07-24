@@ -75,14 +75,6 @@ export default function Fssai() {
             <h1 className="text-5xl font-bold text-white mb-4">FSSAI Services</h1>
             <p className="text-gray-300 max-w-2xl">Complete FSSAI licensing solutions — registration, state and central license, renewals, modifications and annual return filing for all food businesses.</p>
             </div>
-                <div className="hidden md:flex justify-center">
-      <img
-        src="/images/shop.webp"
-        alt="SHOP Services"
-        className="w-full max-w-sm object-contain rounded-2xl"
-        style={{maxHeight: '280px'}}
-      />
-    </div>
           </div>
         </div>
 
